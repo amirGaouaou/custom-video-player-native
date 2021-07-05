@@ -1,0 +1,33 @@
+{
+  "name": "customvideoplayer",
+  "widgetName": "CustomVideoPlayer",
+  "version": "1.0.0",
+  "description": "My widget description",
+  "copyright": "2020 Mendix Technology BV",
+  "author": "Amir Gaouaou",
+  "engines": {
+    "node": ">=12"
+  },
+  "config": {
+    "projectPath": "C:\\Projects\\iSTRYM-main",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:native",
+    "build": "pluggable-widgets-tools build:native",
+    "release": "pluggable-widgets-tools release:native",
+    "lint": "..\"/../../node_modules/.bin/eslint\" --config ../../../.eslintrc.js --ext .jsx,.js,.ts,.tsx src/",
+    "test": "pluggable-widgets-tools test:unit:native",
+    "version": "npm run release",
+    "postversion": "..\"/../../node_modules/.bin/ts-node\" ../../../scripts/release/UpdateGithubRelease.ts --project ../../../scripts/tsconfig.json"
+  },
+  "dependencies": {
+    "react-native-video": "5.1.1"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": ">=8.9.2",
+    "@types/react-native-video": "^5.0.4"
+  }
+}
